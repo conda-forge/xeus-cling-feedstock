@@ -6,8 +6,8 @@ jobs:
   strategy:
     maxParallel: 8
     matrix:
-      osx_:
-        CONFIG: osx_
+      osx_cxx_compilerclangxx:
+        CONFIG: osx_cxx_compilerclangxx
 
   steps:
   # TODO: Fast finish on azure pipelines?
