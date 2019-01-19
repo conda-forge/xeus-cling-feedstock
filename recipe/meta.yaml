@@ -13,10 +13,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   # cling has not been built for windows yet
   skip: true  # [win]
-  {% if 'toolchain' in compiler('cxx') %}skip: True{% endif %}  # Only build with modern compilers.
 
 requirements:
   build:
@@ -40,9 +39,9 @@ requirements:
     - {{ pin_compatible('cling', max_pin='x.x') }}
     # Even though cppzmq, xtl and nlohmann_json are header-only,
     # they are used at runtime by the interpreted c++
-    - {{ pin_compatible('cppzmq', max_pin='x.x.x') }}
-    - {{ pin_compatible('xtl', max_pin='x.x.x') }}
-    - {{ pin_compatible('nlohmann_json', max_pin='x.x.x') }}
+    - {{ pin_compatible('cppzmq', max_pin='x.x') }}
+    - {{ pin_compatible('xtl', max_pin='x.x') }}
+    - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
 
 test:
   commands:
