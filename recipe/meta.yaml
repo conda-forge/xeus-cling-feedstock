@@ -16,7 +16,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
@@ -28,7 +28,7 @@ requirements:
     - cmake
   host:
     - cppzmq >=4.3.0,<4.4.0
-    - zeromq >=4.2.5,<4.4.0
+    - zeromq >=4.3.1,<4.4.0
     - xeus >=0.19.1,<0.20
     - xtl >=0.6.1,<0.7
     - pugixml
