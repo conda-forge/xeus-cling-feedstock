@@ -16,7 +16,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
@@ -29,7 +29,7 @@ requirements:
   host:
     - cppzmq >=4.3.0,<4.4.0
     - zeromq >=4.3.1,<4.4.0
-    - xeus >=0.19.1,<0.20
+    - xeus >=0.19.1,<0.19.3
     - xtl >=0.6.1,<0.7
     - pugixml
     - cxxopts >=2.1.1,<3.0
@@ -46,6 +46,8 @@ requirements:
     - {{ pin_compatible('cppzmq', max_pin='x.x') }}
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
+    # Workaround to xeus 0.19.3 backward incompatibility
+    - {{ pin_compatible('xeus', exact=True) }}
 
 test:
   commands:
