@@ -16,7 +16,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
@@ -50,6 +50,8 @@ requirements:
     - {{ pin_compatible('xeus', exact=True) }}
 
 test:
+  requires:
+    - jupyter_kernel_test
   commands:
     - test -f ${PREFIX}/bin/xcpp  # [unix]
     - if exist %LIBRARY_PREFIX%\bin\xcpp.exe (exit 0) else (exit 1)  # [win]
