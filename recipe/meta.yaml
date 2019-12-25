@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
@@ -31,7 +31,7 @@ requirements:
     - xeus >=0.23.2,<0.24
     - xtl >=0.6.5,<0.7
     - pugixml
-    - cxxopts >=2.1.1,<3.0
+    - cxxopts >=2.1.1,<2.2
     - nlohmann_json >=3.6.1,<4.0
     - dirent >=1.21,<2.0  # [win]
     - zlib
