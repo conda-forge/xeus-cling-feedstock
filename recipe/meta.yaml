@@ -1,6 +1,6 @@
 {% set name = "xeus-cling" %}
-{% set version = "0.8.0" %}
-{% set sha256 = "9b23c40d9dcf1d62092ef962d5500d26bb7d7a292ed6bef83b43444e90d5e054" %}
+{% set version = "0.8.1" %}
+{% set sha256 = "dcc239ca93e9c80eb283307d70bf83a81bd2b4a029ad0be9f01291476ff730d3" %}
 
 {% set clang_version = [5, 0, 0] %}
 {% set cling_version = "0.6" %}
