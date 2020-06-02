@@ -1,6 +1,6 @@
 {% set name = "xeus-cling" %}
-{% set version = "0.8.1" %}
-{% set sha256 = "dcc239ca93e9c80eb283307d70bf83a81bd2b4a029ad0be9f01291476ff730d3" %}
+{% set version = "0.9.0" %}
+{% set sha256 = "b3c6f00149f9d03547e5bb20eea7ed1d066bb4f9c44535a334400ca380427b84" %}
 
 {% set clang_version = [5, 0, 0] %}
 {% set cling_version = "0.6" %}
@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
@@ -58,8 +58,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Cling-based C++ kernel for Jupyter based on xeus'
-  description: 'Jupyter kernel for the C++ programming language'
+  summary: Cling-based C++ kernel for Jupyter based on xeus
+  description: Jupyter kernel for the C++ programming language
   doc_url: http://xeus-cling.readthedocs.io
   dev_url: https://github.com/QuantStack/xeus-cling
 
