@@ -1,9 +1,9 @@
 {% set name = "xeus-cling" %}
-{% set version = "0.9.0" %}
-{% set sha256 = "b3c6f00149f9d03547e5bb20eea7ed1d066bb4f9c44535a334400ca380427b84" %}
+{% set version = "0.10.0" %}
+{% set sha256 = "c22d8f09d3337855d946ed19adb4837e9d3cffa9216007c9bdeb16ca284ff783" %}
 
 {% set clang_version = [5, 0, 0] %}
-{% set cling_version = "0.6" %}
+{% set cling_version = "0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -28,7 +28,7 @@ requirements:
   host:
     - cppzmq >=4.6.0,<4.7.0
     - zeromq >=4.3.1,<4.4.0
-    - xeus >=0.23.2,<0.24
+    - xeus >=0.24.0,<0.25
     - xtl >=0.6.5,<0.7
     - pugixml
     - cxxopts >=2.1.1,<2.2
