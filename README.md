@@ -5,9 +5,13 @@ Home: http://quantstack.net/xeus-cling
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-cling-feedstock/blob/master/LICENSE.txt)
 
 Summary: Cling-based C++ kernel for Jupyter based on xeus
+
+Development: https://github.com/QuantStack/xeus-cling
+
+Documentation: http://xeus-cling.readthedocs.io
 
 Jupyter kernel for the C++ programming language
 
