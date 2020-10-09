@@ -9,9 +9,13 @@ cxx_compiler_version:
 docker_image:
 - condaforge/linux-anvil-comp7
 pin_run_as_build:
+  zeromq:
+    max_pin: x.x
   zlib:
     max_pin: x.x
 target_platform:
 - linux-64
+zeromq:
+- 4.3.2
 zlib:
 - '1.2'
