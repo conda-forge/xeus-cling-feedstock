@@ -1,7 +1,11 @@
+BUILD:
+- aarch64-conda_cos7-linux-gnu
+cdt_arch:
+- aarch64
 cdt_name:
-- cos6
+- cos7
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -9,14 +13,14 @@ cxx_compiler:
 cxx_compiler_version:
 - '9'
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-aarch64
 pin_run_as_build:
   zeromq:
     max_pin: x.x
   zlib:
     max_pin: x.x
 target_platform:
-- linux-64
+- linux-aarch64
 zeromq:
 - 4.3.2
 zlib:

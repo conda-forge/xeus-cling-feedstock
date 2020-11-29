@@ -25,13 +25,14 @@ requirements:
   build:
     - {{ compiler('cxx') }}
     - cmake
+    - make  # [unix]
   host:
     - cppzmq >=4.6.0,<5
     - zeromq
     - xeus >=0.24.2,<0.26
     - xtl >=0.6.5,<0.7
     - pugixml
-    - cxxopts >=2.1.1,<2.2
+    - cxxopts >=2.1.1,<2.3
     - nlohmann_json >=3.9.1,<4.0
     - dirent >=1.21,<2.0  # [win]
     - zlib
