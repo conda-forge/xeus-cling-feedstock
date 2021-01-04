@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
