@@ -22,6 +22,6 @@ pin_run_as_build:
 target_platform:
 - linux-aarch64
 zeromq:
-- 4.3.2
+- 4.3.3
 zlib:
 - '1.2'
