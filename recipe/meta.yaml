@@ -1,6 +1,6 @@
 {% set name = "xeus-cling" %}
-{% set version = "0.10.0" %}
-{% set sha256 = "c22d8f09d3337855d946ed19adb4837e9d3cffa9216007c9bdeb16ca284ff783" %}
+{% set version = "0.10.1" %}
+{% set sha256 = "a3e4f0260df0271573e176026758901b0863462d3ac29ead5f5e4c21f29d7217" %}
 
 {% set clang_version = [5, 0, 0] %}
 {% set cling_version = "0.7" %}
@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
@@ -32,7 +32,7 @@ requirements:
     - xeus >=0.24.2,<0.26
     - xtl >=0.6.5,<0.7
     - pugixml
-    - cxxopts >=2.1.1,<2.3
+    - cxxopts >=2.1.1,<2.2
     - nlohmann_json >=3.9.1,<4.0
     - dirent >=1.21,<2.0  # [win]
     - zlib
