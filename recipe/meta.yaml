@@ -3,7 +3,7 @@
 {% set sha256 = "b421eed41998d085e29d69a58bdf1b65fabc774c5e921381ea1d3253c9228983" %}
 
 {% set clang_version = [5, 0, 0] %}
-{% set cling_version = "0.7" %}
+{% set cling_version = "0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
