@@ -11,11 +11,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/QuantStack/xeus-cling/archive/{{ version }}.tar.gz
+  url: https://github.com/jupyter-xeus/xeus-cling/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   # Cling has not been built for windows yet
   skip: true  # [win]
   run_exports:
@@ -55,14 +55,14 @@ test:
     - if exist %LIBRARY_PREFIX%\bin\xcpp.exe (exit 0) else (exit 1)  # [win]
 
 about:
-  home: http://quantstack.net/xeus-cling
+  home: https://github.com/jupyter-xeus/xeus-cling
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
   summary: Cling-based C++ kernel for Jupyter based on xeus
   description: Jupyter kernel for the C++ programming language
-  doc_url: http://xeus-cling.readthedocs.io
-  dev_url: https://github.com/QuantStack/xeus-cling
+  doc_url: https://xeus-cling.readthedocs.io
+  dev_url: https://github.com/jupyter-xeus/xeus-cling
 
 extra:
   recipe-maintainers:
