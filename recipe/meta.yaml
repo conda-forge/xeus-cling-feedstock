@@ -46,6 +46,7 @@ requirements:
     - {{ pin_compatible('cppzmq', max_pin='x.x') }}
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
+    - {{ pin_compatible('cxxopts', max_pin='x.x') }}
 
 test:
   requires:
