@@ -1,6 +1,6 @@
 {% set name = "xeus-cling" %}
-{% set version = "0.12.1" %}
-{% set sha256 = "69b8f2bdb473cf12db27a67c412d02b9df433b156aeaf4e0eebd5ae7ba597a6e" %}
+{% set version = "0.13.0" %}
+{% set sha256 = "064e3bf0b05eb9dcc46755d30d47543cb5b6f845c9e3ff0fb9c5837825ec8d98" %}
 
 {% set clang_version = [5, 0, 0] %}
 {% set cling_version = "0.8" %}
@@ -29,11 +29,11 @@ requirements:
   host:
     - cppzmq >=4.6.0,<5
     - zeromq
-    - xeus >=1.0,<2.0
+    - xeus >=2.0,<3.0
     - xtl >=0.7,<0.8
     - pugixml
     - cxxopts >=2.1.1,<2.2
-    - nlohmann_json >=3.9.1,<4.0
+    - nlohmann_json >=3.9.1,<3.10
     - dirent >=1.21,<2.0  # [win]
     - zlib
     - llvmdev {{ clang_version[0] }}
