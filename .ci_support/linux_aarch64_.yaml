@@ -14,14 +14,7 @@ cxx_compiler_version:
 - '10'
 docker_image:
 - quay.io/condaforge/linux-anvil-aarch64
-pin_run_as_build:
-  zeromq:
-    max_pin: x.x
-  zlib:
-    max_pin: x.x
 target_platform:
 - linux-aarch64
-zeromq:
-- 4.3.4
 zlib:
 - '1.2'
