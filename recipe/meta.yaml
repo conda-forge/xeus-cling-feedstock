@@ -13,9 +13,11 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xeus-cling/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - mtune_generic.patch
 
 build:
-  number: 0
+  number: 1
   # Cling has not been built for windows yet
   skip: true  # [win or aarch64 or osx]
   run_exports:
