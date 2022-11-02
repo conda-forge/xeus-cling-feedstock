@@ -1,9 +1,9 @@
 {% set name = "xeus-cling" %}
 {% set version = "0.14.0" %}
-{% set sha256 = "5e83df542b213cdde1e926f2267a7de3f52cb62d49ae05f4953416c3de91b8f2" %}
+{% set sha256 = "eb946d801db4cef3a07c60d91f17cb5aece206210298eaeb1682813c624ef8c0" %}
 
-{% set clang_version = [5, 0, 0] %}
-{% set cling_version = "0.8" %}
+{% set clang_version = [9, 0, 1] %}
+{% set cling_version = "0.9" %}
 
 package:
   name: {{ name|lower }}
@@ -17,9 +17,9 @@ source:
     - mtune_generic.patch
 
 build:
-  number: 1
+  number: 2
   # Cling has not been built for windows yet
-  skip: true  # [win or aarch64 or osx]
+  skip: true  # [win or aarch64]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
@@ -38,8 +38,7 @@ requirements:
     - dirent >=1.21,<2.0  # [win]
     - zlib
     - llvmdev {{ clang_version[0] }}
-    - clangdev {{ clang_version|join('.') }}
-    - clang_variant * cling_v{{ cling_version }}
+    - clangdev {{ clang_version|join('.') }} cling_v{{ cling_version }}*
     - cling {{ cling_version }}
   run:
     # Even though cppzmq, xtl and nlohmann_json are header-only,
