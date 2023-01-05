@@ -13,8 +13,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xeus-cling/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - mtune_generic.patch
 
 build:
   number: 3
