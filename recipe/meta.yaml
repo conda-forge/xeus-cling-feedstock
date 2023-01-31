@@ -1,6 +1,6 @@
 {% set name = "xeus-cling" %}
-{% set version = "0.14.0" %}
-{% set sha256 = "eb946d801db4cef3a07c60d91f17cb5aece206210298eaeb1682813c624ef8c0" %}
+{% set version = "0.15.0" %}
+{% set sha256 = "c1dde978668361c484f8b8962ba5f05c358e429e2cd37fa40b40b60baa6f96e7" %}
 
 {% set clang_version = [9, 0, 1] %}
 {% set cling_version = "0.9" %}
@@ -15,7 +15,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 0
   # Cling has not been built for windows yet
   skip: true  # [win or aarch64]
   run_exports:
@@ -28,10 +28,10 @@ requirements:
     - make  # [unix]
   host:
     - cppzmq >=4.6.0,<5
-    - xeus-zmq >=1.0,<2.0
+    - xeus-zmq >=1.0.1,<2.0
     - xtl >=0.7,<0.8
     - pugixml
-    - cxxopts >=2.1.1,<2.2
+    - cpp-argparse >=2.9,<3
     - nlohmann_json >=3.9.1,<3.10
     - dirent >=1.21,<2.0  # [win]
     - zlib
@@ -44,7 +44,6 @@ requirements:
     - {{ pin_compatible('cppzmq', max_pin='x.x') }}
     - {{ pin_compatible('xtl', max_pin='x.x') }}
     - {{ pin_compatible('nlohmann_json', max_pin='x.x') }}
-    - {{ pin_compatible('cxxopts', max_pin='x.x') }}
 
 test:
   requires:
