@@ -13,6 +13,8 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/jupyter-xeus/xeus-cling/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:            # [win]
+    - LLVM_DIR.patch  # [win]
 
 build:
   number: 0
