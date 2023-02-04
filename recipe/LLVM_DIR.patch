@@ -1,0 +1,25 @@
+From cd8bc001e1146c042555b8e6fc72318ad6b72827 Mon Sep 17 00:00:00 2001
+From: Sylvain Corlay <sylvain.corlay@gmail.com>
+Date: Sat, 4 Feb 2023 20:19:47 +0100
+Subject: [PATCH] LLVM_DIR
+
+---
+ src/xinterpreter.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/xinterpreter.cpp b/src/xinterpreter.cpp
+index 528424c..6086158 100644
+--- a/src/xinterpreter.cpp
++++ b/src/xinterpreter.cpp
+@@ -44,7 +44,7 @@ namespace xcpp
+     }
+ 
+     interpreter::interpreter(int argc, const char* const* argv)
+-        : m_interpreter(argc, argv, LLVM_DIR),
++        : m_interpreter(argc, argv),
+           m_input_validator(),
+           m_version(get_stdopt(argc, argv)), // Extract C++ language standard version from command-line option
+           xmagics(),
+-- 
+2.30.1 (Apple Git-130)
+
