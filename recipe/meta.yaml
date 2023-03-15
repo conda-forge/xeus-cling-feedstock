@@ -38,6 +38,7 @@ requirements:
     - llvmdev {{ clang_version[0] }}
     - clangdev {{ clang_version|join('.') }} cling_v{{ cling_version }}*
     - cling {{ cling_version }}
+    - libcxx <15
   run:
     # Even though cppzmq, xtl and nlohmann_json are header-only,
     # they are used at runtime by the c++ interpreter.
