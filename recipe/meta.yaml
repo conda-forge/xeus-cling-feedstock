@@ -26,6 +26,7 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - make  # [unix]
+    - libcxx <15
   host:
     - cppzmq >=4.6.0,<5
     - xeus-zmq >=1.0.1,<2.0
