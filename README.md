@@ -1,11 +1,11 @@
-About xeus-cling
-================
+About xeus-cling-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-cling-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyter-xeus/xeus-cling
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xeus-cling-feedstock/blob/main/LICENSE.txt)
 
 Summary: Cling-based C++ kernel for Jupyter based on xeus
 
