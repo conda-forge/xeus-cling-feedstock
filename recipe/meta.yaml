@@ -1,6 +1,6 @@
 {% set name = "xeus-cling" %}
-{% set version = "0.15.0" %}
-{% set sha256 = "c1dde978668361c484f8b8962ba5f05c358e429e2cd37fa40b40b60baa6f96e7" %}
+{% set version = "0.15.1" %}
+{% set sha256 = "53bbc5cc9badae339593b5b5175e65b1e4d472013a4d245c5ef97a7b25c6d2a0" %}
 
 {% set clang_version = [9, 0, 1] %}
 {% set cling_version = "0.9" %}
@@ -17,7 +17,7 @@ source:
 build:
   number: 0
   # Cling has not been built for windows yet
-  skip: true  # [win or aarch64]
+  skip: true  # [not linux or aarch64]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
 
