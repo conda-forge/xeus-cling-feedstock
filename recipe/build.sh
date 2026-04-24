@@ -1,7 +1,7 @@
 #!/bin/bash
 export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY=1"
 
-cmake -DCMAKE_BUILD_TYPE=Release     \
+cmake ${CMAKE_ARGS} -DCMAKE_BUILD_TYPE=Release     \
       -DCMAKE_INSTALL_PREFIX=$PREFIX \
       -DCMAKE_PREFIX_PATH=$PREFIX    \
       -DCMAKE_INSTALL_LIBDIR=lib     \
